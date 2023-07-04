@@ -13,3 +13,5 @@ jobs:
       - run: yarn
       - run: yarn webpack build --mode=production
       - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update generated translation index files
