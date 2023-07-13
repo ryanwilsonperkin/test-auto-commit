@@ -3,6 +3,7 @@ name: 'Update code'
 on:
   pull_request:
     types: [opened, reopened]
+    branches: ["translation-platform/**"]
 jobs:
   update:
     runs-on: ubuntu-latest
