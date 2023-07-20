@@ -9,7 +9,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.pusher.username }} pushed this commit"
+      - run: echo "${{ github.event.push.pusher.username }} pushed this commit"
       - uses: actions/checkout@v3
       - run: yarn
       - run: yarn webpack build --mode=production
