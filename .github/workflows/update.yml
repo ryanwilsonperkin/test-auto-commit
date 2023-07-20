@@ -2,8 +2,8 @@ name: 'Update code'
 
 on:
   push:
-    branches:
-      - 'translation-platform/**'
+    files:
+      - '**/*.js'
 
 jobs:
   update:
