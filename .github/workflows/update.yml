@@ -9,7 +9,11 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.push.pusher.username }} pushed this commit"
+      - name: Show context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
       - uses: actions/checkout@v3
       - run: yarn
       - run: yarn webpack build --mode=production
