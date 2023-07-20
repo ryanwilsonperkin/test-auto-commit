@@ -2,7 +2,7 @@ name: 'Update code'
 
 on:
   push:
-    files:
+    paths:
       - '**/*.js'
 
 jobs:
